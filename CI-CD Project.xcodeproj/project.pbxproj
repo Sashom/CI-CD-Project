@@ -13,6 +13,8 @@
 		0FB43A3A21918A71000D7506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB43A3921918A71000D7506 /* Assets.xcassets */; };
 		0FB43A3D21918A71000D7506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB43A3B21918A71000D7506 /* LaunchScreen.storyboard */; };
 		0FB43A4821918A71000D7506 /* CI_CD_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB43A4721918A71000D7506 /* CI_CD_ProjectTests.swift */; };
+		0FD8EB682191908E00703A10 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8EB662191908E00703A10 /* Crashlytics.framework */; };
+		0FD8EB692191908E00703A10 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD8EB672191908E00703A10 /* Fabric.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0FB43A4321918A71000D7506 /* CI-CD ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CI-CD ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB43A4721918A71000D7506 /* CI_CD_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CI_CD_ProjectTests.swift; sourceTree = "<group>"; };
 		0FB43A4921918A71000D7506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FD8EB662191908E00703A10 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		0FD8EB672191908E00703A10 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD8EB682191908E00703A10 /* Crashlytics.framework in Frameworks */,
+				0FD8EB692191908E00703A10 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,8 @@
 				0FB43A3121918A70000D7506 /* CI-CD Project */,
 				0FB43A4621918A71000D7506 /* CI-CD ProjectTests */,
 				0FB43A3021918A70000D7506 /* Products */,
+				0FD8EB662191908E00703A10 /* Crashlytics.framework */,
+				0FD8EB672191908E00703A10 /* Fabric.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +114,7 @@
 				0FB43A2B21918A70000D7506 /* Sources */,
 				0FB43A2C21918A70000D7506 /* Frameworks */,
 				0FB43A2D21918A70000D7506 /* Resources */,
+				0FD8EB6521918E1900703A10 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,6 +200,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FD8EB6521918E1900703A10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run abbb99188634703352fbb73ac2d9892aa1e1ec98 df37f051f2d8c207bee92e383d160950f41dd177de380fb2852c77994f70ef56\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FB43A2B21918A70000D7506 /* Sources */ = {
@@ -361,7 +390,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QC34DQH58R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CI-CD Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,7 +413,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QC34DQH58R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CI-CD Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
